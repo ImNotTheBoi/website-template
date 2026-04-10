@@ -14,4 +14,15 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
   },
   eslintConfigPrettier,
+  {
+    overrides: [
+      {
+        files: ["tests/**/*"],
+        plugins: ["jest"],
+        env: {
+          "jest/globals": true,
+        },
+      },
+    ],
+  },
 ]);
